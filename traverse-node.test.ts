@@ -49,7 +49,12 @@ test('traverseNode', () => {
         {
           "children": [
             {
-              "children": [],
+              "children": [
+                {
+                  "content": "321",
+                  "type": "Text",
+                },
+              ],
               "tag": "h1",
               "type": "Element",
             },
