@@ -1,4 +1,4 @@
-import { AstNode, parseAst } from './parse-ast'
+import { AstNode } from './parse-ast'
 
 export function dump(node: AstNode, indent = 0) {
   const { type, tag, content } = node
@@ -9,5 +9,3 @@ export function dump(node: AstNode, indent = 0) {
     node.children.forEach((child) => dump(child, indent + 2))
   }
 }
-
-dump(parseAst('<div><p>Hello</p><p>World</p></div>'))

@@ -1,3 +1,4 @@
+import { JSNode } from './create-js-ast-node'
 import type { Token } from './tokenize'
 import { tokenize } from './tokenize'
 
@@ -12,6 +13,7 @@ export type AstNode = {
   children?: AstNode[]
   content?: string
   tag?: string
+  jsNode?: JSNode
 }
 
 export function parseAst(str: string): AstNode {
